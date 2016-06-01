@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta name="mobile-agent" content="format=html5; url=$!page.selfMLink" /> 
+  <meta name="mobile-agent" content="format=xhtml; url=$!page.selfMLink" /> 
+  <meta name="mobile-agent" content="format=wml; url=$!page.selfMLink" /> 
+  <link rel="alternate" media="only screen and(max-width: 640px)" href="$!page.selfMLink" /> 
+  <meta http-equiv="Cache-Control" content="no-transform" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+  <link rel="shortcut icon" href="http://www.456fs.com/staticResource/Picture/favicon.ico">
+  <meta name="applicable-device" content="pc" /> 
+  <title>[${page.pageKeyWord}]-${page.currentTagLink.name}最新资讯、评论、图片、视频_${page.currentSite.name}风水网</title>
+  <meta name="keywords" content="${page.currentTagLink.name},${page.currentTagLink.name}资讯,${page.currentTagLink.name}评论,${page.currentTagLink.name}图片,${page.currentTagLink.name}视频" /> 
+  <meta name="description" content="${page.currentTagLink.name}专题栏目为您提供关于${page.currentTagLink.name}的文章,以${page.currentTagLink.name}为话题的资讯，图片，评论，视频,${page.currentSite.name}为您提供有关${page.currentTagLink.name}的最新内容。" /> 
+  <link rel="stylesheet" type="text/css" href="http://www.456fs.com/staticResource/css/456fs.css" /> 
+ </head> 
+ <body> 
+  <div id="header">
+   <div id="toolbar">
+    <div class="tool">
+      ##待定义完成后，再进行填充 ##
+     <div class="left fl">
+      <a href="$!page.selfMLink" >${page.currentSite.name}手机版</a>
+     </div> 
+     <div class="right fr">
+      你好,欢迎访问
+      <a href="${page.currentSite.sitePath}" title="${page.currentSite.name}" target="_self">${page.currentSite.name}</a> 
+     </div> 
+    </div>
+   </div> 
+   <div class="head"> 
+    <div class="logo fl">
+     <a href="${page.currentSite.sitePath}"><img src="http://www.456fs.com/staticResource/Picture/logo.png" alt="${page.currentSite.name}" /></a>
+     <h1>十二星座</h1>
+    </div> 
+    <div class="left fr"> 
+     <div class="AD-680">
+      <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174687";</script> 
+      <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+     </div> 
+    <div class="cl"></div> 
+	</div>
+   </div>
+  </div> 
+  <div class="nav">
+   <ul> 
+    <li><a href="${page.currentSite.sitePath}" target="_self" title="${page.currentSite.name}">${page.currentSite.name}</a></li> #foreach($firstLevelLink in $page.firstLevelLinks) 
+    <li><a href="${firstLevelLink.resourcePath}" title="${firstLevelLink.name}">${firstLevelLink.name}</a></li> #end 
+   </ul>
+  </div> 
+  <div class="subnav">
+   <ul>
+     #foreach($mergeTag in $page.randomTagLinks) 
+    <li><a href="${mergeTag.resourcePath}" title="${mergeTag.name}" >${mergeTag.name}</a></li> #end 
+   </ul> 
+  </div> 
+  <div class="AD-960">
+   <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174691";</script> 
+   <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+  </div> 
+  <div class="container list_repeat"> 
+   <div class="container-bd list_top"> 
+    <div class="main-wrap"> 
+     <div class="article-left"> 
+      <div class="title" style="font-size:16px;color:#690;"> 
+       <a href="${page.currentSite.sitePath}" class="breadcrumb" title="${page.currentSite.name}" target="_blank">${page.currentSite.name}</a> 
+       <h3> <font style="color:#FF7E00;;">${page.currentTagLink.name}</font></h3> 
+      </div> 
+      <div class="list-item"> 
+       <div class="main-wrap" style="width:690px;"> 
+        <div class="pic-title">
+         <h3 class="ico-07">${page.currentTagLink.name}美图</h3>
+         <span style="padding-right:10px;"><a href="${page.currentSite.sitePath}" title="${page.currentSite.name}">${page.currentSite.name}</a><a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}">${page.currentTagLink.name}</a>频道为您提供${page.currentTagLink.name}图片</span>
+        </div> 
+        <div id="pic" style="width:690px;"> 
+         <div id="picbox" style="width:690px;"> 
+          <table align="center" border="0" cellpadding="3" cellspacing="0"> 
+           <tbody>
+            <tr>
+             <td id="meiwen_pic1" valign="top"> 
+              <table border="0" cellpadding="2" cellspacing="0" height="140" width="180"> 
+               <tbody> 
+                <tr>
+                  #foreach($imageLink in $page.imageLinks) 
+                 <td style=" padding-right:40px;"><a href="${imageLink.resourcePath}" title="${imageLink.name}" target="_blank"><img src="${imageLink.resourcePath}" alt="${imageLink.name}" height="140" width="180" /></a><p><a href="#" style="color:#FFF" title="${imageLink.name}" target="_blank">${imageLink.name}</a></p></td> #end
+                </tr>
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="AD-680"> 
+       <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174692";</script> 
+       <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+      </div> 
+      <ul class="left-item">
+        #foreach($article in $page.articleLinks) 
+       <li><h3 class="ico-11"></h3>
+        <div class="la">
+         <h3><a href="${article.resourcePath}" title="${article.name}" target="_blank">${article.name}</a></h3> 
+        </div> <p>${article.content}...</p>
+        <div class="lb">
+         关联词： #foreach($baiduWord in $article.recommendStrs) 
+         <h2 class="sousuoh2">$baiduWord</h2>, #end 
+        </div></li> #end 
+      </ul> 
+      <div class="AD-680">
+       <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174693";</script> 
+       <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+      </div> 
+      <div class="main-wrap" style="width:690px;"> 
+       <div class="pic-title">
+        <h3 class="ico-07"><a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}视频">${page.currentTagLink.name}视频</a></h3>
+        <span style="padding-right:10px;"><a href="${page.currentSite.sitePath}" title="${page.currentSite.name}">${page.currentSite.name}</a><a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}">${page.currentTagLink.name}</a>视频为您提供有关<a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}">${page.currentTagLink.name}</a>的最新视频消息</span>
+       </div> 
+       <div id="pic" style="width:690px;"> 
+        <div id="picbox" style="width:690px;"> 
+         <table align="center" border="0" cellpadding="3" cellspacing="0"> 
+          <tbody>
+           <tr>
+            <td id="meiwen_pic1" valign="top"> 
+             <table border="0" cellpadding="2" cellspacing="0" height="140" width="180"> 
+              <tbody> 
+               <tr>
+                 #foreach($video in $page.videoLinks) 
+                <td style=" padding-right:40px;"><a href="${video.resourcePath}" title="${video.name}"><img src="http://www.456fs.com/staticResource/Picture/video.png" alt="${video.name}" height="140" width="180" /></a><p><a href="${video.resourcePath}" style="color:#FFF" title="${video.name}" target="_blank">${video.name}</a></p></td> #end 
+               </tr>
+              </tbody>
+             </table> </td> 
+           </tr> 
+          </tbody>
+         </table> 
+        </div> 
+       </div> 
+       <div class="AD-680">
+        <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174694";</script> 
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+       </div> 
+       <ul class="left-item"> 
+        <div class="pic-title">
+         <h3 class="ico-07"><a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}评论">${page.currentTagLink.name}评论</a></h3>
+         <span style="padding-right:10px;"><a href="${page.currentSite.resourcePath}" title="${page.currentSite.name}">${page.currentSite.name}</a><a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}">${page.currentTagLink.name}</a>评论为您提供网友对<a href="${page.currentTagLink.resourcePath}" title="${page.currentTagLink.name}">${page.currentTagLink.name}</a>的多种看法。</span>
+        </div> #foreach($comment in $page.commentLinks) 
+        <li>${comment.nickName}的看法： <p>${comment.content}。</p>
+         <div class="lb">
+         </div> #end </li>
+       </ul> 
+      </div>
+      <div class="AD-680">
+       <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174695";</script> 
+       <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+      </div> 
+     </div>
+     <div class="article-right"> 
+      <div class="right-item"> 
+       <div class="title">
+        <font style="font-size:18px;color: #373;">本周推荐</font>
+       </div> 
+       <!-- 一周更新的全站文章--> 
+       <div class="box">
+         #set($i = 1) #foreach($recommendArti in $page.recommendArtis) #if($i < 4) 
+        <li><span class="a b">$i</span><a href="${recommendArti.resourcePath}" target="_blank" title="${recommendArti.name}">${recommendArti.name}</a></li> #else 
+        <li><span class="a">$i</span><a href="${recommendArti.resourcePath}" target="_blank" title="${recommendArti.name}">${recommendArti.name}</a></li> #end #set($i = $i + 1) #end 
+       </div>
+       <div class="AD-240">
+        <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174698";</script> 
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+       </div>
+      </div> 
+      <div class="right-item"> 
+       <div class="title">
+        <font style="font-size:18px;color: #373;">热点阅读</font>
+       </div> 
+       <!-- 全站浏览量最多的文章--> 
+       <div class="box">
+         #set($i = 1) #foreach($hotestArti in $page.hotestArtis) #if($i < 4) 
+        <li><span class="a b">$i</span><a href="${hotestArti.resourcePath}" target="_blank" title="${hotestArti.name}">${hotestArti.name}</a></li> #else 
+        <li><span class="a">$i</span><a href="${hotestArti.resourcePath}" target="_blank" title="${hotestArti.name}">${hotestArti.name}</a></li> #end #set($i = $i + 1) #end 
+       </div>
+       <div class="AD-240">
+        <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174699";</script> 
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+       </div>
+      </div> 
+      <div id="right-box"> 
+       <div id="right-ad" class="item1"> 
+        <div class="right-item"> 
+         <div class="title">
+          <font style="font-size:18px;color: #373;">全网文章</font>
+         </div> 
+         <!-- 随机展现全站文章--> 
+         <div class="box">
+           #set($i = 1) #foreach($randomArti in $page.randomArtis) #if($i < 4) 
+          <li><span class="a b">$i</span><a href="${randomArti.resourcePath}" target="_blank" title="${randomArti.name}">${randomArti.name}</a></li> #else 
+          <li><span class="a">$i</span><a href="${randomArti.resourcePath}" target="_blank" title="${randomArti.name}">${randomArti.name}</a></li> #end #set($i = $i + 1) #end 
+         </div>
+        </div> 
+        <div class="AD-240"> 
+         <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174702";</script> 
+         <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> 
+        </div> 
+       </div> 
+      </div> 
+     </div>
+     <div class="cl"></div> 
+    </div>
+    <!-- /left --> 
+    <!-- /right --> 
+   </div> 
+  </div>
+  <div class="c1 container-bottom"></div> 
+   <div class="footer">
+  <p class="p_1"> #foreach($firstLevelLink in $page.firstLevelLinks) <a href="${firstLevelLink.resourcePath}" title="${firstLevelLink.name}">${firstLevelLink.name}</a>| #end </p>
+  <div class="footer_service">
+    <ul>
+        <li><a href="$!page.selfMLink">手机版</a></li>
+        <li><a href="$!page.selfLink" >电脑版</a></li>
+    </ul>
+   </div>
+  <p class="p_2">提供 #foreach($randomMergeTag in $page.mergeTagLinks) <a href="${randomMergeTag.resourcePath}" target="_blank" title="${randomMergeTag.name}">${randomMergeTag.name}</a>, #end 等资料 </p>
+   <p class="p_2">Copyright &copy; 2015-2016 <a href="${page.currentSite.sitePath}" title="${page.currentSite.sitePath}">${page.currentSite.sitePath}</a> All Rights Reserved. <a href="${page.currentSite.sitePath}" title="十二星座">${page.currentSite.name}</a> 版权所有</p>
+   <p class="p_2">备案信息：鲁ICP备12010724号-2</p>
+  </div>
+  <script type="text/javascript" src="http://www.456fs.com/staticResource/js/jquery-2.1.1.min.js"></script> 
+  <script type="text/javascript" src="http://www.456fs.com/staticResource/js/456fs.js"></script> 
+  <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174690";</script> 
+  <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>   
+  $!page.countCode
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="starService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/bizStarService" />
+              <property name="serviceInterface" value="com.fuyoushuo.seores.biz.star.Interface.IBizStarService" />
+       </bean>
+
+       <bean name="articleService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/articleService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.article.Interface.IArticleService"/>
+       </bean>
+
+       <bean name="categoryService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/categoryService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.category.Interface.ICategoryService"/>
+       </bean>
+
+       <bean name="commentService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/commentService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.coment.Interface.ICommentService"/>
+       </bean>
+
+       <bean name="imgService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/imgService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.img.Interface.IImgService"/>
+       </bean>
+
+       <bean name="siteService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/siteService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.site.Interface.ISiteService"/>
+       </bean>
+
+       <bean name="videoService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/videoService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.video.Interface.IVideoService"/>
+       </bean>
+
+       <bean name="wordService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/wordService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.word.Interface.IWordService"/>
+       </bean>
+
+       <bean name="topicService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+              <property name="serviceUrl" value="${seo_server_url}/seores/topicService"/>
+              <property name="serviceInterface" value="com.fuyoushuo.seores.topic.Interface.ITopicService"/>
+       </bean>
+
+</beans>

@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta name="mobile-agent" content="format=html5; url=$!page.selfMLink" /> 
+  <meta name="mobile-agent" content="format=xhtml; url=$!page.selfMLink" /> 
+  <meta name="mobile-agent" content="format=wml; url=$!page.selfMLink" /> 
+  <link rel="alternate" media="only screen and(max-width: 640px)" href="$!page.selfMLink" /> 
+  <meta http-equiv="Cache-Control" content="no-transform" /> 
+  <link rel="shortcut icon" href="http://www.456fs.com/staticResource/Picture/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+  <meta name="applicable-device" content="pc" /> 
+  <title>$!page.seoTitle</title> 
+  <meta name="keywords" content="$!page.seoKeyword" /> 
+  <meta name="description" content="$!page.seoDesc" /> 
+  <link rel="stylesheet" type="text/css" href="http://www.456fs.com/staticResource/css/456fs.css" /> 
+ </head> 
+ <body> 
+  <div id="header">
+   <div id="toolbar">
+    <div class="tool">
+      ##
+     <div class="left fl">
+      <a href="$!page.selfMLink" >${page.currentSite.name}手机版</a>
+     </div> 
+     <div class="right fr">
+      你好,欢迎访问
+      <a href="${page.currentSite.sitePath}" title="${page.currentSite.name}" target="_self">${page.currentSite.name}</a> 
+     </div> 
+    </div>
+   </div> 
+   <div class="head"> 
+    <div class="logo fl">
+     <a href="${page.currentSite.sitePath}"><img src="http://www.456fs.com/staticResource/Picture/logo.png" alt="${page.currentSite.name}" /></a>
+     <h1>十二星座</h1>
+    </div> 
+    <div class="left fr"> 
+     <div class="AD-680">
+      <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174740";</script> 
+      <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+     </div>
+     <div class="cl"></div> 
+    </div>
+   </div>
+  </div> 
+  <div class="nav">
+   <ul> 
+    <li><a href="${page.currentSite.sitePath}" target="_self" title="${page.currentSite.name}">${page.currentSite.name}</a></li> #foreach($firstLevelCate in $page.firstLevelLinks) 
+    <li><a href="${firstLevelCate.resourcePath}" title="${firstLevelCate.name}">${firstLevelCate.name}</a></li> #end 
+   </ul>
+  </div> 
+  <div class="subnav">
+   <ul>
+     #foreach($randomTag in $page.randomFirstLevelTags) 
+    <li><a href="${randomTag.resourcePath}" title="${randomTag.name}">${randomTag.name}</a></li> #end 
+   </ul> 
+  </div> 
+  <div class="AD-960">
+   <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174741";</script> 
+   <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+  </div> 
+  <div class="container list_repeat"> 
+   <div class="container-bd list_top"> 
+    <div class="main-wrap"> 
+     <div class="article-left"> 
+      <div class="title">
+       <dt class="ico-07">
+        <a href="${page.currentLevelLink.resourcePath}" ><h1 title="${page.currentLevelLink.name}">${page.currentLevelLink.name}</h1></a>频道
+       </dt> 
+       <span> #set($index = 1) #foreach($secondLevelLink in $page.currentLevelLink.secondLevelLinks) #if($index <8) <li><a href="${secondLevelLink.resourcePath}" title="${secondLevelLink.name}" target="_blank">${secondLevelLink.name}</a></li> #end #set($index = $index + 1) #end </span> 
+      </div> 
+      <div class="category"> 
+       <div class="item"> 
+        <div class="top">
+         <a href= "${page.currentLevelLink.randomArticleLinks.get(0).resourcePath}" target="_blank"><img src="${page.currentLevelLink.imageLinks.get(0).resourcePath}" height="90" width="120" /></a> 
+         <h4><a href="${page.currentLevelLink.randomArticleLinks.get(0).resourcePath}" target="_blank" title="${page.currentLevelLink.randomArticleLinks.get(0).name}">${page.currentLevelLink.randomArticleLinks.get(0).name}</a></h4>
+         <p>${page.currentLevelLink.randomArticleLinks.get(0).content}...</p>
+        </div> 
+        <ul>
+          #set($i = 1) #foreach($firstLevelArticle in $page.currentLevelLink.randomArticleLinks) #if($i < 10 && $i > 1) 
+         <li><span class="time">${firstLevelArticle.articleDate}</span><span class="list">[<a class="item-color" href="${firstLevelArticle.secondLevelLink.resourcePath}" target="_blank">${firstLevelArticle.secondLevelLink.name}</a>]</span><a href="${firstLevelArticle.resourcePath}" title="${firstLevelArticle.name}" target="_blank">${firstLevelArticle.name}</a></li> #end #set($i = $i+1) #end 
+        </ul> 
+       </div> 
+       <div class="item"> 
+        <div class="top">
+         <a href="${page.currentLevelLink.randomArticleLinks.get(10).resourcePath}" target="_blank"><img src="${page.currentLevelLink.imageLinks.get(1).resourcePath}" height="90" width="120" /></a> 
+         <h4><a href="${page.currentLevelLink.randomArticleLinks.get(10).resourcePath}" target="_blank" title="${page.currentLevelLink.randomArticleLinks.get(10).name}">${page.currentLevelLink.randomArticleLinks.get(10).name}</a></h4>
+         <p>${page.currentLevelLink.randomArticleLinks.get(10).content}...</p> 
+        </div> 
+        <ul>
+          #set($j = 1) #foreach($firstLevelArticle in $page.currentLevelLink.randomArticleLinks) #if($j > 10) 
+         <li><span class="time">${firstLevelArticle.articleDate}</span><span class="list">[<a class="item-color" href="${firstLevelArticle.secondLevelLink.resourcePath}" target="_blank">${firstLevelArticle.secondLevelLink.name}</a>]</span><a href="${firstLevelArticle.resourcePath}" title="${firstLevelArticle.name}" target="_blank">${firstLevelArticle.name}</a></li> #end #set($j = $j+1) #end 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="index-item">
+        #set($t = 1) #foreach($secondLevel in $page.currentLevelLink.secondLevelLinks) #if($t % 2 != 0) 
+       <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174743";</script> 
+       <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> #end 
+       <div class="item-box"> 
+        <div class="ta">
+         <h2><a href="${secondLevel.resourcePath}" title="${secondLevel.name}">${secondLevel.name}</a></h2>
+        </div>
+        <div class="tb">
+         <h4><a href="${secondLevel.articleLinks.get(0).resourcePath}" target="_blank" title="${secondLevel.articleLinks.get(0).name}">${secondLevel.articleLinks.get(0).name}</a></h4>
+         <p>${secondLevel.articleLinks.get(0).content}...</p>
+        </div> 
+        <div class="tc">
+          #set($index = 1) #foreach($secondArticle in $secondLevel.articleLinks) #if($index >1) 
+         <li><span class="time">${secondArticle.articleDate}</span><a href="${secondArticle.resourcePath}" target="_blank" title="${secondArticle.name}">${secondArticle.name}</a></li> #end #set($index =$index + 1) #end 
+        </div> 
+       </div> #set($t = $t + 1) #end 
+      </div> 
+      <div class="cl"></div> 
+     </div> 
+     <div class="article-right"> 
+      <div class="right-item"> 
+       <div class="title">
+        <font style="font-size:18px;color: #373;">猜你喜欢</font>
+       </div> 
+       <!-- 展示标签--> 
+       <div class="tag">
+        <ul>
+          #foreach($randomTag in $page.recommendFirstLevelTags)
+         <li><a href="${randomTag.resourcePath}" title="${randomTag.name}" target="_blank">${randomTag.name}</a></li> #end 
+        </ul> 
+       </div>
+      </div> 
+      <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174747";</script> 
+      <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> 
+      <div class="right-item"> 
+       <div class="title">
+        <h3><a href="${page.currentLevelLink.resourcePath}" title="${page.currentLevelLink.name}" target="_blank">${page.currentLevelLink.name}</a>热点</h3>
+       </div> 
+       <!-- 展示一级栏目内浏览量最高的的文章--> 
+       <div class="box">
+         #set($i = 1) #foreach($hotArti in $page.hotArtis) #if($i < 4) 
+        <li><span class="a b">$i</span><a href="${hotArti.resourcePath}" target="_blank" title="${hotArti.name}">${hotArti.name}</a></li> #else 
+        <li><span class="a">$i</span><a href="${hotArti.resourcePath}" target="_blank" title="${hotArti.name}">${hotArti.name}</a></li> #end #set($i = $i + 1) #end 
+       </div>
+      </div>
+      <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174749";</script> 
+      <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> 
+      <div id="right-box"> 
+       <div id="right-ad" class="item1"> 
+        <div class="right-item"> 
+         <div class="title">
+          <font style="font-size:18px;color: #373;">最近文章</font>
+         </div> 
+         <div class="box">
+           #set($i = 1) #foreach($lastestArti in $page.lastestArtis) #if($i < 4) 
+          <li><span class="a b">$i</span><a href="${lastestArti.resourcePath}" target="_blank" title="${lastestArti.name}">${lastestArti.name}</a></li> #else 
+          <li><span class="a">$i</span><a href="${lastestArti.resourcePath}" target="_blank" title="${lastestArti.name}">${lastestArti.name}</a></li> #end #set($i = $i + 1) #end 
+         </div>
+        </div>
+        <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174751";</script> 
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div class="c1 container-bottom"></div> 
+  </div> 
+  <div class="main-wrap"> 
+   <div class="link-title">
+    <h3 class="ico-07">友情链接</h3>
+    <span>${page.currentSite.name}合作要求：<a href="http://fengshui.456fs.com/">风水</a>,<a href="http://xingzuo.456fs.com/">星座</a>,<a href="http://jiemeng.456fs.com/">解梦</a>,<a href="http://shengxiao.456fs.com/">生肖</a>等内容相关站点</span>
+   </div> 
+   <div class="friendlink"> 
+    <ul>
+     <li><a href="http://www.456fs.com/" target="_blank">456风水</a></li> 
+     <li><a href="http://fengshui.456fs.com/" target="_blank">风水知识</a></li> 
+    <li><a href="http://xingzuo.456fs.com/" target="_blank">星座查询</a></li> 
+    <li><a href="http://benmingnian.456fs.com/" target="_blank">本命年运程</a></li> 
+    <li><a href="http://jiri.456fs.com/" target="_blank">黄道吉日</a></li> 
+    <li><a href="http://shengxiao.456fs.com/" target="_blank">生肖配对</a></li> 
+    <li><a href="http://xuexing.456fs.com/" target="_blank">血型与性格</a></li> 
+    <li><a href="http://jiemeng.456fs.com/" target="_blank">周公解梦</a></li>
+    <li><a href="http://top.aizhan.com" target="_blank">网站排行榜</a></li>
+	</ul>
+   </div> 
+  </div> 
+   <div class="footer">
+  <p class="p_1"> #foreach($firstLevelLink in $page.firstLevelLinks) <a href="${firstLevelLink.resourcePath}" title="${firstLevelLink.name}">${firstLevelLink.name}</a>| #end </p>
+  <div class="footer_service">
+    <ul>
+        <li><a href="$!page.selfMLink" >手机版</a></li>
+        <li><a href="$!page.selfLink" >电脑版</a></li>
+    </ul>
+   </div>
+  <p class="p_2">提供 #foreach($randomMergeTag in $page.mergeTagLinks) <a href="${randomMergeTag.resourcePath}" target="_blank" title="${randomMergeTag.name}">${randomMergeTag.name}</a>, #end 等资料 </p>
+   <p class="p_2">Copyright &copy; 2015-2016 <a href="${page.currentSite.sitePath}" title="${page.currentSite.sitePath}">${page.currentSite.sitePath}</a> All Rights Reserved. <a href="${page.currentSite.sitePath}" title="十二星座">${page.currentSite.name}</a> 版权所有</p>
+   <p class="p_2">备案信息：鲁ICP备12010724号-2</p>
+  </div> 
+  <script type="text/javascript" src="http://www.456fs.com/staticResource/js/jquery-2.1.1.min.js"></script> 
+  <script type="text/javascript" src="http://www.456fs.com/staticResource/js/456fs.js"></script> 
+  <script type="text/javascript">BAIDU_CLB_SLOT_ID = "1174742";</script> 
+  <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script> 
+  $!page.countCode  
+ </body>
+</html>

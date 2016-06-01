@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false">
+    <diskStore path="java.io.tmpdir" />
+    <defaultCache eternal="false" maxElementsInMemory="1000"
+                  overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+                  timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU" />
+    <cache name="starIndexPage" eternal="false" maxElementsInMemory="10"
+           overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+           timeToLiveSeconds="86400" memoryStoreEvictionPolicy="LRU" />
+
+    <!--<cache name="starDetailPage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="starArticlePage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="starImgPage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="starVideoPage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="starLongWorldPage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+    <!--<cache name="starsPage" eternal="false" maxElementsInMemory="100"-->
+           <!--overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"-->
+           <!--timeToLiveSeconds="30" memoryStoreEvictionPolicy="LRU" />-->
+
+</ehcache>

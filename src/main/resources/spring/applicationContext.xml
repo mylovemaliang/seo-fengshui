@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+ http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd">
+
+
+       <import resource="remote-service.xml"/>
+
+       <context:annotation-config/>
+
+       <context:property-placeholder location="/WEB-INF/spring/params.properties" />
+       
+       <bean id="propertyUtil" class="com.fuyoushuo.common.tool.PropertyUtil">
+	          <property name="ignoreResourceNotFound" value="true" />
+	          <property name="locations">
+	                    <list>
+	                       <value>/WEB-INF/spring/params.properties</value>
+	                    </list>
+	          </property>
+		</bean>
+
+       <context:component-scan base-package="cn.fuyoushuo.fengshui"/>
+       <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+       <!--spring ehcache-->
+       <cache:annotation-driven cache-manager="cacheManager" proxy-target-class="true" />
+
+       <!-- Ehcache  -->
+       <bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" >
+              <property name="configLocation" value="classpath:other/ehcache.xml"/>
+       </bean>
+
+       <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+              <property name="cacheManager" ref="cacheManagerFactory"/>
+       </bean>
+
+</beans>

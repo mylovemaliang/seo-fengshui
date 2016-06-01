@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+       <context:component-scan base-package="cn.fuyoushuo.fengshui.controller" />
+
+       <mvc:annotation-driven></mvc:annotation-driven>
+
+       <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+              <property name="messageConverters">
+                     <list>
+                            <ref bean="fastJsonHttpMessageConverter" />
+                     </list>
+              </property>
+       </bean>
+
+       <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+              <property name="defaultEncoding" value="utf-8" />
+              <property name="maxUploadSize" value="10485760000" />
+              <property name="maxInMemorySize" value="40960" />
+       </bean>
+
+       <bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+              <property name="supportedMediaTypes">
+                     <list>
+                            <value>application/json;charset=UTF-8</value>
+                     </list>
+              </property>
+       </bean>
+
+       <bean id="formDataHttpMessageConverter" class="org.springframework.http.converter.FormHttpMessageConverter">
+              <property name="supportedMediaTypes">
+                     <list>
+                            <value>application/x-www-form-urlencoded; charset=UTF-8</value>
+                     </list>
+              </property>
+       </bean>
+
+
+    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath"  value="WEB-INF/page" /><!-- 设置模板放置位置-->
+        <property name="velocityProperties">
+            <props>
+                <prop key="directive.foreach.counter.name">loopCounter</prop>
+                <prop key="directive.foreach.counter.initial.value">0</prop>
+                <prop key="input.encoding">GBK</prop><!-- 指定模板引擎进行模板处理的编码 -->
+                <prop key="output.encoding">GBK</prop><!-- 指定输出流的编码 -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- 设置视图解析工具 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="suffix" value=".vm" />
+        <!-- 避免乱码 -->
+        <property name="contentType" value="text/html;charset=GBK" />
+        <property name="dateToolAttribute" value="dateTool" />
+        <property name="numberToolAttribute" value="numberTool" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+    </bean>
+</beans>
