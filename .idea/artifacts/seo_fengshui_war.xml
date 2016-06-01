@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="seo-fengshui:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="seo-fengshui.war">
-      <element id="artifact" artifact-name="seo-fengshui:war exploded" />
-    </root>
-  </artifact>
-</component>
