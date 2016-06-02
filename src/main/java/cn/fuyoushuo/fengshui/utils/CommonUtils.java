@@ -175,16 +175,21 @@ public class CommonUtils {
         return resultList;
     }
 
+    //产生文章链接
     public static List<ArticleLink> transArticleToLink(ResourcePathManger resourcePathManger,List<Article> articles){
         List<ArticleLink> links = new ArrayList<ArticleLink>();
         if(CollectionUtils.isEmpty(articles)){
             return links;
+        }
+        for(Article article : articles){
+
         }
 
         return links;
     }
 
 
+    //产生
     public static List<FirstLevelLink> transFirstLevelCatesToLinks(ResourcePathManger resourcePathManger,List<Category> categories){
         if(CollectionUtils.isEmpty(categories)){
             return null;
@@ -254,8 +259,4 @@ public class CommonUtils {
         }
         return videoLinks;
     }
-
-
-
-
 }

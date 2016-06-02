@@ -1,19 +1,13 @@
 package cn.fuyoushuo.fengshui.ext;
 
 import cn.fuyoushuo.fengshui.constant.SiteType;
-import cn.fuyoushuo.sitegroup.constant.SiteType;
-import cn.fuyoushuo.sitegroup.entity.Category;
-import cn.fuyoushuo.sitegroup.entity.Site;
 import com.fuyoushuo.seores.article.entity.Article;
 import com.fuyoushuo.seores.category.entity.Category;
 import com.fuyoushuo.seores.img.entity.Img;
-import com.fuyoushuo.seores.site.entity.Site;
 import com.fuyoushuo.seores.video.entity.Video;
 import com.fuyoushuo.seores.word.entity.Word;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.Locale;
 
 /**
  * Created by MALIANG on 2016/1/13.
